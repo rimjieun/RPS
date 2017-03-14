@@ -22,28 +22,19 @@ table[class^="row"] {
 }
 
 td {
+  border: 1px solid black;
   text-align: center;
   vertical-align: middle;
 }
 
-.row-1 {
-  height: 8vw;
-}
-
-.row-4 {
-  height: 30vw;
-  background: #ebf4fa;
-}
-
-.row-5 {
-  height: 5vw;
-  background: #ebf4fa;
+.row-2, .row-5 {
+  display: none;
 }
 
 #heading {
   color: #206ba4;
   font-size: 5vw;
-  padding-top: 1vw;
+  padding: 4vw 0 3vw;
 }
 
 #heading:hover {
@@ -52,44 +43,56 @@ td {
 
 input {
   font-size: 1.5vw;
+  display: block;
+  margin: 1vw auto;
 }
 
 #start-btn {
+  font-family: 'Baloo Bhaina';
+  font-size: 2vw;
+  line-height: 3vw;
   background: #206ba4;
   color: #ebf4fa;
-  padding: 0.2vw 1.5vw;
+  padding: 0.4vw 1.5vw 0;
   border: none;
   border-radius: 1vw;
   outline: none;
 }
 
-img[class^="icon"] {
-  width: 25vw;
-  height: auto;
-}
-
-.icon-male,
-.icon-female {
-  position: relative;
-}
-
-.icon-male {
-  left: 8vw;
-}
-
-.icon-female {
-  right: 8vw;
-}
-
-.icon-male:hover,
-.icon-female:hover,
 #start-btn:hover {
+  color: black;
   background: #ffab35;
   cursor: pointer;
 }
 
-.icon-male:hover,
-.icon-female:hover {
+img[id^="icon"] {
+  width: 25vw;
+  height: auto;
+}
+
+#icon-male,
+#icon-female {
+  position: relative;
+}
+
+#icon-male {
+  left: 8vw;
+}
+
+#icon-female {
+  right: 8vw;
+}
+
+#icon-male:hover,
+#icon-female:hover {
+  background: #206ba4;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#icon-male:target,
+#icon-female:target {
+  background: #ffab35;
   border-radius: 50%;
 }
 

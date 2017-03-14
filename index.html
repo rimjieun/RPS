@@ -11,7 +11,7 @@
   <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
   <script type="text/javascript" src="assets/javascript/game.js"></script>
   <!-- Firebase -->
-  <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.7.1/firebase.js"></script>
   <!-- Baloo Bhaina -->
   <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina" rel="stylesheet">
   <title>Rim | RPS Multiplayer</title>
@@ -23,35 +23,28 @@
       <td id="heading">ROCK PAPER SCISSORS</td>
     </tr>
   </table>
-  <!-- Playe Icons -->
+  <!-- Player Info-->
   <table class="row-2">
-    <tr>
-    </tr>
   </table>
-  <!-- Player Names -->
+  <!-- Player Icons/Moves -->
   <table class="row-3">
     <tr>
-    </tr>
-  </table>
-  <!-- Player Moves -->
-  <table class="row-4">
-    <tr>
-      <td><img class="icon-male" src="assets/images/male-icon.png" value="male"></td>
-      <td><img class="icon-female" src="assets/images/female-icon.png" value="female"></td>
+      <td><a href="#icon-male"><img id="icon-male" src="assets/images/male-icon.png" value="male"></a></td>
+      <td><a href="#icon-female"><img id="icon-female" src="assets/images/female-icon.png" value="female"></a></td>
     </tr>
   </table>
   <!-- Name Input & Game Progress -->
-  <table class="row-5">
+  <table class="row-4">
     <tr>
       <td>
         <form>
-          <input id="user-name" type="text" placeholder="Name">
-          <input id="start-btn" type="submit" value="Start">
+          <input id="player-name" type="text" placeholder="Name">
+          <input id="start-btn" type="submit" value="START">
       </td>
     </tr>
   </table>
   <!-- Chat Box -->
-  <table class="row-6">
+  <table class="row-5">
     <tr>
     </tr>
   </table>
