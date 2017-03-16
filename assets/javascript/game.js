@@ -143,7 +143,7 @@ $(document).ready(function() {
       $("img[id^='icon'], input").remove();
     }
 
-    $(".row-2.col-left, .row-2.col-right").css({background: "#54a4de"});
+    $(".row-2.col-left, .row-2.col-right").css({background: "rgba(255,171,53,0.7)"});
     $(".row-2.col-left").css({"border-top-right-radius": "50px"});
     $(".row-2.col-right").css({"border-top-left-radius": "50px"});
     $(".row-3.col-left, .row-3.col-right").css({background: "#f4f5e7"});
