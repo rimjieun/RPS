@@ -25,20 +25,45 @@
   </table>
   <!-- Player Info-->
   <table class="row-2">
+    <tr>
+      <td class="r2-col-left">
+        <div class="player-div">
+          <img class="player-icon">
+          <p class="player-name"></p>
+        </div>
+        <div class="score-div">
+          <p class="player-wins"></p>
+          <p class="player-losses"></p>
+        </div>
+      </td>
+      <td class="r2-col-mid">
+        <p id="vs"></p>
+      </td>
+      <td class="r2-col-right">
+        <div class="player-div">
+          <img class="player-icon">
+          <p class="player-name"></p>
+        </div>
+        <div class="score-div">
+          <p class="player-wins"></p>
+          <p class="player-losses"></p>
+        </div>
+      </td>
+    </tr>
   </table>
   <!-- Player Icons/Moves -->
   <table class="row-3">
     <tr>
-      <td><a href="#icon-male"><img id="icon-male" src="assets/images/male-icon.png" value="male"></a></td>
-      <td><a href="#icon-female"><img id="icon-female" src="assets/images/female-icon.png" value="female"></a></td>
+      <td class="r3-col-left"><a href="#icon-male"><img id="icon-male" src="assets/images/male-icon.png" value="male"></a></td>
+      <td class="r3-col-right"><a href="#icon-female"><img id="icon-female" src="assets/images/female-icon.png" value="female"></a></td>
     </tr>
   </table>
   <!-- Name Input & Game Progress -->
   <table class="row-4">
     <tr>
-      <td>
+      <td id="game-progress">
         <form>
-          <input id="player-name" type="text" placeholder="Name">
+          <input id="player-name" type="text" placeholder="Name" maxlength="30">
           <input id="start-btn" type="submit" value="START">
       </td>
     </tr>
@@ -46,6 +71,7 @@
   <!-- Chat Box -->
   <table class="row-5">
     <tr>
+      <td id="chat-box"></td>
     </tr>
   </table>
 
