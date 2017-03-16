@@ -17,6 +17,10 @@ body {
   box-sizing: border-box;
 }
 
+p {
+  color: green;
+}
+
 table[class^="row"] {
   width: 100%;
 }
@@ -35,27 +39,19 @@ td {
   margin-top: 4vw;
 }
 
-.r2-col-left,
-.r2-col-right {
+.col-left,
+.col-right {
   width: 45%;
   max-width: 45%;
 }
 
-.r2-col-mid {
+.col-mid {
   width: 10%;
 }
 
-.r3-col-left,
-.r3-col-right {
-  width: 50%;
-}
-
-.r3-col-left {
-  border-left: 1px solid black;
-}
-
 #heading {
-  color: #206ba4;
+  /*color: #206ba4;*/
+  color: black;
   font-size: 5vw;
   padding: 4vw 0 3vw;
 }
@@ -99,11 +95,11 @@ img[id^="icon"] {
 }
 
 #icon-male {
-  left: 13vw;
+  left: 17vw;
 }
 
 #icon-female {
-  right: 13vw;
+  right: 17vw;
 }
 
 #icon-male:hover,
@@ -120,9 +116,8 @@ img[id^="icon"] {
 }
 
 .player-div {
-  /*background: yellow;*/
   display: inline-block;
-  margin: 0 auto;
+  margin: 1vw 0 0 0;
 }
 
 .player-icon {
@@ -149,6 +144,11 @@ li {
   margin: 1vw auto;
 }
 
+li:hover {
+  color: #ffab35;
+  cursor: pointer;
+}
+
 #game-progress {
   font-size: 5vw;
   line-height: 6vw;
@@ -156,7 +156,6 @@ li {
 }
 
 .score-div {
-  /*background: yellow;*/
   width: 10vw;
   position: relative;
   margin: 0.5vw auto;

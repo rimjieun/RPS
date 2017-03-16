@@ -66,21 +66,21 @@ $(document).ready(function() {
   var loadPlayer = {
 
     one: function(n, i, w, l) {
-      $(".r2-col-left").addClass("filled");
-      $(".r2-col-right .player-name").html("Waiting for Player 2...");
-      $(".r2-col-left .player-icon").attr("src", i);
-      $(".r2-col-left .player-name").text(n);
-      $(".r2-col-left .player-wins").text("Wins: " + w);
-      $(".r2-col-left .player-losses").text("Losses: " + l);
+      $(".row-2 .col-left").addClass("filled");
+      $(".row-2 .col-right .player-name").html("Waiting for Player 2...");
+      $(".row-2 .col-left .player-icon").attr("src", i);
+      $(".row-2 .col-left .player-name").text(n);
+      $(".row-2 .col-left .player-wins").text("Wins: " + w);
+      $(".row-2 .col-left .player-losses").text("Losses: " + l);
     },
 
     two: function(n, i, w, l) {
       alert("loading player 2");
       $("#vs").text("vs");
-      $(".r2-col-right .player-icon").attr("src", i);
-      $(".r2-col-right .player-name").html(n);
-      $(".r2-col-right .player-wins").text("Wins: " + w);
-      $(".r2-col-right .player-losses").text("Losses: " + l);
+      $(".row-2 .col-right .player-icon").attr("src", i);
+      $(".row-2 .col-right .player-name").html(n);
+      $(".row-2 .col-right .player-wins").text("Wins: " + w);
+      $(".row-2 .col-right .player-losses").text("Losses: " + l);
     }
   }
 
@@ -89,20 +89,20 @@ $(document).ready(function() {
     one: function() {
       alert("loading player 1 moves");
 
-      $(".r3-col-left").html("<ul>");
+      $(".row-3 .col-left").html("<ul>");
 
       for (i = 0; i < availableMoves.length; i++) {
-        $(".r3-col-left ul").append("<li>" + availableMoves[i] + "</li>");
+        $(".row-3 .col-left ul").append("<li>" + availableMoves[i] + "</li>");
       }
     },
 
     two: function() {
       alert("loading player 2 moves");
 
-      $(".r3-col-right").html("<ul>");
+      $(".row-3 .col-right").html("<ul>");
 
       for (i = 0; i < availableMoves.length; i++) {
-        $(".r3-col-right ul").append("<li>" + availableMoves[i] + "</li>");
+        $(".row-3 .col-right ul").append("<li>" + availableMoves[i] + "</li>");
       }
     }
   }
@@ -143,6 +143,13 @@ $(document).ready(function() {
       $("img[id^='icon'], input").remove();
     }
 
+    $(".row-2.col-left, .row-2.col-right").css({background: "#54a4de"});
+    $(".row-2.col-left").css({"border-top-right-radius": "50px"});
+    $(".row-2.col-right").css({"border-top-left-radius": "50px"});
+    $(".row-3.col-left, .row-3.col-right").css({background: "#f4f5e7"});
+    $(".row-3.col-left").css({"border-bottom-right-radius": "50px"});
+    $(".row-3.col-right").css({"border-bottom-left-radius": "50px"});
+
     dbRefPlayers.on("child_added", function(snapPlayer) {
 
       name = snapPlayer.val().name;
@@ -150,7 +157,7 @@ $(document).ready(function() {
       wins = snapPlayer.val().wins;
       losses = snapPlayer.val().losses;
 
-      if ($(".r2-col-left").hasClass("filled")) { //make sure to remove ".filled" when user leaves
+      if ($(".row-2 .col-left").hasClass("filled")) { //make sure to remove ".filled" when user leaves
         loadPlayer.two(name, icon, wins, losses);
       }
       else {
@@ -174,8 +181,8 @@ $(document).ready(function() {
       if (turnIsEven) {
         alert("turn is even: " + turns);
         if (sessionStorage.playerNum === "two") {
-          $(".r3-col-right ul").css({visibility: "visible"});
-          $(".r3-col-left ul").css({visibility: "hidden"});
+          $(".row-3 .col-right ul").css({visibility: "visible"});
+          $(".row-3 .col-left ul").css({visibility: "hidden"});
         }
       }
       else {
@@ -185,7 +192,7 @@ $(document).ready(function() {
           $("#game-progress").html("Your move.");
         }
         else if (sessionStorage.playerNum === "two") {
-          $(".r3-col-left ul").css({visibility: "hidden"});
+          $(".row-3 .col-left ul").css({visibility: "hidden"});
           dbRefP1.on("value", function(snapP1) {
             var p1Name = snapP1.val().name;
             console.log(p1Name);
@@ -209,6 +216,10 @@ $(document).ready(function() {
     $("img").removeClass("selected");
 
     $(this).addClass("selected");
+  });
+
+  $(document).on("click", "li", function() {
+
   });
 
 
