@@ -276,7 +276,7 @@ $(document).ready(function() { // ADD ERROR CATCHERS!!!!!!!!!!!!!!!!!!!!!!!!!!!!
       }
       else {
         loadPlayer.one(name, icon, wins, losses);
-      },
+      }
     });
 
   });
