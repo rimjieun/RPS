@@ -83,7 +83,7 @@ $(document).ready(function() { // ADD ERROR CATCHERS!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     },
 
     two: function(n, i, w, l) {
-      alert("loading player 2");
+      // alert("loading player 2");
       $("#vs").text("vs");
       $(".row-2 .col-right .player-icon").attr("src", "assets/images/" + i + ".png");
       $(".row-2 .col-right .player-name").html(n);
@@ -96,7 +96,7 @@ $(document).ready(function() { // ADD ERROR CATCHERS!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
     one: function() {
 
-      alert("loading player 1 moves");
+      // alert("loading player 1 moves");
 
       $(".row-3 .col-left").html("<ul>");
 
@@ -107,7 +107,7 @@ $(document).ready(function() { // ADD ERROR CATCHERS!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
     two: function() {
 
-      alert("loading player 2 moves");
+      // alert("loading player 2 moves");
 
       $(".row-3 .col-right").html("<ul>");
 
@@ -349,7 +349,7 @@ $(document).ready(function() { // ADD ERROR CATCHERS!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
   // When player 1 chooses move==============================================================
   $(document).on("click", ".p1-choices", function() {
-    alert("load p1 move");
+    // alert("load p1 move");
     var p1Move = $(this).text().toLowerCase();
     loadMoveForPlayer.one(p1Move);
     update.turns();
@@ -357,7 +357,7 @@ $(document).ready(function() { // ADD ERROR CATCHERS!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
   // When player 2 chooses moves==============================================================
   $(document).on("click", ".p2-choices", function() {
-    alert("load p2 move");
+    // alert("load p2 move");
     var p2Move = $(this).text().toLowerCase();
     loadMoveForPlayer.two(p2Move);
     update.turns();
@@ -379,17 +379,17 @@ function restart() {
 
 dbRefTurns.onDisconnect().remove();
 
-dbRefPlayers.on("child_removed", function(removedPlayer) {
-  var key = removedPlayer.key;
-  if (key === "1") {
-    $(".row-2 .col-left").html("Waiting for a player...").removeClass("filled");
-    $(".row-3 .col-left").empty();
-  }
-  else if (key === "2") {
-    $(".row-2 .col-right").html("Waiting for a player...");
-    $(".row-3 .col-right").empty();
-  }
-});
+// dbRefPlayers.on("child_removed", function(removedPlayer) {
+//   var key = removedPlayer.key;
+//   if (key === "1") {
+//     $(".row-2 .col-left").html("Waiting for a player...").removeClass("filled");
+//     $(".row-3 .col-left").empty();
+//   }
+//   else if (key === "2") {
+//     $(".row-2 .col-right").html("Waiting for a player...");
+//     $(".row-3 .col-right").empty();
+//   }
+// });
 
 
 
