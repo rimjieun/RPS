@@ -8,7 +8,7 @@ Lightslategray: #6d8ca0, rgb(109,140,160)
 Linen: #f4f5e7, rgb(244,245,231)*/
 
 body {
-  background: #ebf4fa;
+  background: #f4f5e7;
   font-family: 'Baloo Bhaina', cursive;
   line-height: 0;
 }
@@ -18,7 +18,7 @@ body {
 }
 
 p {
-  color: green;
+  color: #206ba4;
 }
 
 table[class^="row"] {
@@ -31,22 +31,25 @@ td {
   vertical-align: middle;
 }
 
-.row-2, .row-5 {
-  display: none;
+.row-1 {
+  background: #f4f5e7;
 }
 
 .row-4 {
-  margin-top: 4vw;
+  margin-top: 2vw;
 }
 
 .col-left,
 .col-right {
-  width: 45%;
-  max-width: 45%;
+  width: auto;
 }
 
-.col-mid {
-  width: 10%;
+.row-2.col-mid {
+  width: 20%;
+}
+
+.row-3.col-mid {
+  width: 8%;
 }
 
 #heading {
@@ -134,14 +137,10 @@ img[id^="icon"] {
   float: left;
 }
 
-ul {
-  margin: 2vw auto;
-}
-
 li {
-  font-size: 3vw;
+  font-size: 4vw;
   line-height: 3vw;
-  margin: 1vw auto;
+  margin: 2vw auto;
 }
 
 li:hover {
@@ -152,7 +151,7 @@ li:hover {
 #game-progress {
   font-size: 5vw;
   line-height: 6vw;
-  margin: 1vw auto;
+  /*margin: 1vw auto;*/
 }
 
 .score-div {
@@ -173,4 +172,26 @@ li:hover {
   font-size: 3vw;
 }
 
+#icon-msg {
+  font-size: 3vw;
+  line-height: 8vw;
+}
 
+.p1-move,
+.p2-move {
+  width: 20vw;
+  height: auto;
+}
+
+.p2-move {
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}
+
+.nameInMsg {
+  color: green;
+}
